@@ -15,7 +15,7 @@
     "#watch-server-hmr": "Recompile server HMR bundle on changes",
     "watch-server-hmr": "webpack -w --config webpack.ServerHMR.js",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "heroku-postbuild": "npm run compile && ln -fs ../node_modules/bootstrap/dist/public/bootstrap"
+    "heroku-postbuild": "npm run compile && ln -sf ../node_modules/bootstrap/dist/public/bootstrap"
   },
   "author": "nikhil.padole1999@gmail.com",
   "license": "ISC",
