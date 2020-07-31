@@ -54,6 +54,7 @@ class SignInNavItem extends React.Component {
             const response = await fetch(
                 `${apiEndpoint}/signin`,{
                     method: 'POST',
+                    withCredentials: true,
                     credentials: 'include',
                     headers : {'Content-Type':'application/json'},
                     body: JSON.stringify({google_token: googleToken}),
