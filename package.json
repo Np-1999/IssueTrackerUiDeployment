@@ -3,6 +3,10 @@
   "version": "1.0.0",
   "description": "",
   "main": "UIServer.js",
+  "engines": {
+    "node": "12.x",
+    "npm": "6.x"
+  },
   "scripts": {
     "#start": "UI server. HMR is enabled in dev mode.",
     "start": "node dist/server.js",
@@ -10,7 +14,8 @@
     "compile": "webpack --mode production",
     "#watch-server-hmr": "Recompile server HMR bundle on changes",
     "watch-server-hmr": "webpack -w --config webpack.serverHMR.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "heroku-postbuild": "npm run compile && ln -fs ../node_modules/bootstrap/distpublic/bootstrap"
   },
   "author": "nikhil.padole1999@gmail.com",
   "license": "ISC",
